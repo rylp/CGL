@@ -19,18 +19,20 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked() //draw
 {
-    bresenham(50,50,350,50);
-    bresenham(50,50,50,200);
-    bresenham(50,200,350,200);
-    bresenham(350,50,350,200);
-    dda(50,125,200,50);
-    dda(200,50,350,125);
-    dda(350,125,200,200);
-    dda(200,200,50,125);
-    bresenham(125,87,275,87);
-    bresenham(275,87,275,161);
-    bresenham(275,161,125,161);
-    bresenham(125,87,125,161);
+    bresenham(50,50,290,50);
+    bresenham(290,50,290,230);
+    bresenham(290,230,50,230);
+    bresenham(50,230,50,50);
+
+   dda(170,50,50,140);
+   dda(50,140,170,230);
+   dda(170,230,290,140);
+   dda(290,140,170,50);
+
+    bresenham(110,95,230,95);
+    bresenham(230,95,230,185);
+    bresenham(230,185,110,185);
+    bresenham(110,185,110,95);
     ui->label->setPixmap(QPixmap::fromImage(img));//always last statement in code
 
 }
